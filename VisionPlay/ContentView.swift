@@ -10,17 +10,76 @@ import RealityKit
 import RealityKitContent
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Model3D(named: "Scene", bundle: realityKitContentBundle)
-                .padding(.bottom, 50)
+    @State private var imagesFromFirstArray = true
+    let images = ["coast", "dog"]
+    let imagesTakeTwo = ["nanas", "whale"]
 
-            Text("Hello, world!")
+    var displayedImages: [String] {
+        imagesFromFirstArray ? images : imagesTakeTwo
+    }
+
+    var body: some View {
+        TabView {
+            ImageView()
+                .tabItem { Label("Pics", systemImage: "photo.artframe") }
+            TextFieldView()
+                .tabItem { Label("Writer", systemImage: "pencil.tip") }
         }
-        .padding()
     }
 }
 
 #Preview(windowStyle: .automatic) {
     ContentView()
+}
+
+struct ImageView: View {
+    @State private var imagesFromFirstArray = true
+    let images = ["coast", "dog"]
+    let imagesTakeTwo = ["nanas", "whale"]
+
+    var displayedImages: [String] {
+        imagesFromFirstArray ? images : imagesTakeTwo
+    }
+
+    var body: some View {
+        VStack {
+            ScrollView(.horizontal, showsIndicators: true) {
+                HStack(spacing: 0) {
+                    ForEach(displayedImages, id: \.self) { imageName in
+                        Image(imageName)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .padding(40)
+                    }
+                }
+            }
+            Button(action: {
+                imagesFromFirstArray.toggle()
+            }) {
+                Text("Reload")
+                    .font(.title)
+                    .padding()
+                    .foregroundColor(.white)
+            }
+            .padding()
+        }
+    }
+}
+
+
+struct TextFieldView: View {
+    @State private var enteredText = ""
+
+        var body: some View {
+            VStack {
+                TextField("Type something...", text: $enteredText)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
+
+                Text("You entered: \(enteredText)")
+                    .font(.headline)
+                    .padding()
+            }
+            .padding()
+        }
 }

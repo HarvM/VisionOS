@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "all-about-bananas-nutrition-facts-health-benefits-recipes-and-more-rm-722x406.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
