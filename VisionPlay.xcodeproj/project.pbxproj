@@ -13,6 +13,7 @@
 		192D1D682AB4895600382529 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 192D1D672AB4895600382529 /* Assets.xcassets */; };
 		192D1D6B2AB4895600382529 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 192D1D6A2AB4895600382529 /* Preview Assets.xcassets */; };
 		192D1D762AB4895600382529 /* VisionPlayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192D1D752AB4895600382529 /* VisionPlayTests.swift */; };
+		19E19A202AC7111A001D57CD /* ImmersiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E19A1F2AC7111A001D57CD /* ImmersiveView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 		192D1D6C2AB4895600382529 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		192D1D712AB4895600382529 /* VisionPlayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VisionPlayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		192D1D752AB4895600382529 /* VisionPlayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionPlayTests.swift; sourceTree = "<group>"; };
+		19E19A1F2AC7111A001D57CD /* ImmersiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			children = (
 				192D1D632AB4895400382529 /* VisionPlayApp.swift */,
 				192D1D652AB4895400382529 /* ContentView.swift */,
+				19E19A1F2AC7111A001D57CD /* ImmersiveView.swift */,
 				192D1D672AB4895600382529 /* Assets.xcassets */,
 				192D1D6C2AB4895600382529 /* Info.plist */,
 				192D1D692AB4895600382529 /* Preview Content */,
@@ -216,6 +219,7 @@
 			files = (
 				192D1D662AB4895400382529 /* ContentView.swift in Sources */,
 				192D1D642AB4895400382529 /* VisionPlayApp.swift in Sources */,
+				19E19A202AC7111A001D57CD /* ImmersiveView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

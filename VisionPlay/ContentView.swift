@@ -24,12 +24,10 @@ struct ContentView: View {
                 .tabItem { Label("Pics", systemImage: "photo.artframe") }
             TextFieldView()
                 .tabItem { Label("Writer", systemImage: "pencil.tip") }
+            ParticleView()
+                .tabItem { Label("Particle", systemImage: "cloud.rain") }
         }
     }
-}
-
-#Preview(windowStyle: .automatic) {
-    ContentView()
 }
 
 struct ImageView: View {
@@ -83,3 +81,9 @@ struct TextFieldView: View {
             .padding()
         }
 }
+
+
+//#Preview(.automatic) {
+//    ContentView()
+//}
+
